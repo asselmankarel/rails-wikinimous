@@ -1,0 +1,11 @@
+<%= render 'navbar' %>
+
+<div class="container">
+  <h1><%= @article.title %></h1>
+  <h3><%= @article.content %></h3>
+
+  <%= link_to 'Edit', edit_article_path, class: 'btn btn-primary' %>
+  <%= link_to 'Delete', article_path(@article), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+  <hr>
+  <%= link_to 'Back to list', articles_path, class: 'btn btn-info mt-2' %>
+</div>
